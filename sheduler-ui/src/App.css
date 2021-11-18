@@ -37,9 +37,22 @@
   }
 }
 
-.nav-item{
+.nav-item-mid{
   color:white;
   padding: 10px;
   font-family: 'Poppins';
   font-weight: 100;
 }
+.nav-item-end{
+  
+  float: right;
+}
+.navbar-nav{
+  width: 100%;
+  overflow: hidden;
+}
+.container{
+  
+background-color: #61dafb;
+  
+ }
