@@ -10,6 +10,8 @@ class DashBoard extends Component{
     }
 
     render(){
+      var numbers=[1,2,3,4,5]
+      var list=numbers.map((item)=>{return <Card key={item}/>})
         return (
             <div class="box">
               <div class="row">
@@ -28,7 +30,9 @@ class DashBoard extends Component{
                     })
                   }}>Schedule</Button></div></div>
                 </div>
-                <div class="col-sm-3 log"><h3>Logs</h3></div>
+                <div class="col-sm-3 log"><h3>Logs</h3>
+                
+                </div>
               
                 
                 </div>
@@ -46,10 +50,27 @@ class DashBoard extends Component{
                   }}/>
                 </div>
                 <div class="col-sm-3 sideboard">
+                
                   <div class="row ">
-                 <Card/>
+                  <h5>Upcoming Events</h5>
+                    <div class="upcoming">
+                  {list}
+                  </div>
+                  
+                 
                   
                     </div>
+                    <div class="row ">
+                    <h5>History</h5>
+                    <div class="upcoming">
+                  {list}
+                  </div>
+                  
+                 
+                  
+                    </div>
+                   
+                    
 
                 </div>
                

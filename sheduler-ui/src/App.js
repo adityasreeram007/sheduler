@@ -16,7 +16,7 @@ class App extends Component{
             </ul>
             <div class="nav-item-end">
               <ul class="navbar-nav">
-                <li class="nav-item-mid">profile</li>
+                <li class="nav-item-mid"><div class="profile">A</div></li>
               </ul>
             </div>
           </nav>

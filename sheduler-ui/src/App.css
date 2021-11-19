@@ -145,10 +145,23 @@ background-color: #61dafb;
   background-color: #56585c;
   outline: 1px solid rgb(65, 63, 63);
 }
+.upcoming::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+.upcoming::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+  
+.upcoming::-webkit-scrollbar-thumb {
+  background-color: #56585c;
+  outline: 1px solid rgb(65, 63, 63);
+}
 .card{                   
   width: 90%;
   padding: 10px;
   height: max-content;
+  margin-bottom: 10px;
 }    
 .w-btn{
 align-self: flex-end;
@@ -167,4 +180,21 @@ height: 100%;
 .dailyTimeLineWrapper::-webkit-scrollbar-thumb {
   background-color: #56585c;
   outline: 1px solid rgb(65, 63, 63);
+}
+.profile{
+  width:35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: darkorange;
+  border-radius: 50%;
+  border: 1px solid aliceblue;
+}
+.upcoming{
+  height: 300px;
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  margin-bottom: 30px;
+
+
 }

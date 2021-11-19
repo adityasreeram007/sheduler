@@ -9,7 +9,7 @@ class Card extends Component{
                 <div>Name of the Event</div>
                <div>25th November 2021</div> 
                <div>04:30PM</div>
-               <div>Notes</div>
+               
             </div>
         )
     }
