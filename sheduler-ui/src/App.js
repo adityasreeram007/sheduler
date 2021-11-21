@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Navbar,Nav,NavDropdown,Container } from 'react-bootstrap'
+import Popup from 'reactjs-popup'
 import DashBoard from './components/DashBoard';
 import './App.css'
 class App extends Component{
@@ -16,7 +16,14 @@ class App extends Component{
             </ul>
             <div class="nav-item-end">
               <ul class="navbar-nav">
-                <li class="nav-item-mid"><div class="profile">A</div></li>
+                <li class="nav-item-mid">
+                <Popup trigger={<div class="profile">A</div>} position="bottom center">
+    <div class="popupcontent"><a href="#">view profile</a></div>
+  </Popup>
+                  
+                  
+                  
+                  </li>
               </ul>
             </div>
           </nav>

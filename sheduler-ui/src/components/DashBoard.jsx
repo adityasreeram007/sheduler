@@ -4,14 +4,16 @@ import Calendar from 'react-awesome-calendar';
 import Modal from 'react-modal';
 import { Button } from 'react-bootstrap'
 import Card from './Card'
+import History from './History'
 class DashBoard extends Component{
     state={
       isOpen:false
     }
 
     render(){
-      var numbers=[1,2,3,4,5]
+      var numbers=[1,2,3,4,5,7,8,9,0]
       var list=numbers.map((item)=>{return <Card key={item}/>})
+      var list1=numbers.map((item)=>{return <History key={item}/>})
         return (
             <div class="box">
               <div class="row">
@@ -62,8 +64,8 @@ class DashBoard extends Component{
                     </div>
                     <div class="row ">
                     <h5>History</h5>
-                    <div class="upcoming">
-                  {list}
+                    <div class="history">
+                  {list1}
                   </div>
                   
                  

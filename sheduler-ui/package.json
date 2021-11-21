@@ -13,6 +13,7 @@
     "react-dom": "^17.0.2",
     "react-modal": "^3.14.4",
     "react-scripts": "4.0.3",
+    "reactjs-popup": "^2.0.5",
     "rsuite": "^5.1.0",
     "uiw": "^4.9.7",
     "web-vitals": "^1.1.2"

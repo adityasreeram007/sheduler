@@ -7,8 +7,8 @@ class Card extends Component{
 
             <div class="card">
                 <div>Name of the Event</div>
-               <div>25th November 2021</div> 
-               <div>04:30PM</div>
+               <div class="date">25th November 2021</div> 
+               <div class="time" >04:30PM</div>
                
             </div>
         )
