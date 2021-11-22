@@ -224,9 +224,71 @@ height: 100%;
  
 .dailyTimeLineWrapper::-webkit-scrollbar-thumb {
   background-color: #56585c;
-  outline: 1px solid rgb(65, 63, 63);
+  
+outline: 1px solid rgb(65, 63, 63);
 }
+.textarea::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+.textarea::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.textarea::-webkit-scrollbar-thumb {
+  background-color: #56585c;
+  
+outline: 1px solid rgb(65, 63, 63);
+}
+.label{
+  margin-left: 1%;
+}
+.forminput{
 
+  width: 90%;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  
+
+}
+.to{ 
+  text-align: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.formbutton{
+  text-align: center;
+  width: 90%;
+  background-color: #282c34;
+  margin-left: 5%;
+  color:white;
+  padding: 4px;
+  border-radius: 2px;
+}
+.textarea{
+height:160px;
+
+}
+.closebutton{
+  cursor: pointer;
+  float: right;
+  
+  
+}
+.form{
+
+  
+  padding: 10px;
+  margin-top: 20px;
+}
+.inputbox{
+
+  font-size: 13px;
+  width: 85%;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 1px;
+}
 .popupcontent{
   background-color: aliceblue;
   font-size: 10px;
