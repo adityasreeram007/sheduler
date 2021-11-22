@@ -1,5 +1,5 @@
 import { Component } from "react";
-import ReactSearchBox from "react-search-box";
+
 
 import Calendar from "react-awesome-calendar";
 import Modal from "react-modal";
@@ -85,14 +85,21 @@ class DashBoard extends Component {
               left: "50%",
               right: "auto",
               bottom: "auto",
-              height: "65%",
-              width: "50%",
+              height: "auto",
+              width: "40%",
               marginRight: "-50%",
+              background: "#343a40",
+             
               transform: "translate(-50%, -50%)",
              
             },
           }}
         >
+          <div class="row formhead">
+            <div class="col-sm-11 ">
+              <h6>Event Info</h6>
+            </div>
+
           <div
             onClick={() => {
               this.setState({
@@ -100,10 +107,10 @@ class DashBoard extends Component {
               });
             }}
 
-            class="closebutton"
+            class="closebutton col-sm-1"
           >
             X
-          </div>
+          </div></div>
           <Form />
         </Modal>
       </div>
