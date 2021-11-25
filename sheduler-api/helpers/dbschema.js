@@ -1,16 +1,16 @@
 module.exports={
     schema:{
+        token:"",
         userinfo:{
             
         },
-        sheduledata:{
-
-        },
+        sheduledata:[],
         history:{
 
         },
         connect:{
             
         }
-    }
+    },
+    
 }

@@ -3,6 +3,7 @@ var cors = require("cors");
 var bcrypt = require("bcrypt");
 var HashFunctions = require("./helpers/hasher");
 var MongoFunctions = require("./helpers/mongohelper");
+var SessionFunctions = require("./helpers/sessionHelper");
 var bodyParser = require("body-parser");
 const { MongoClient } = require("mongodb");
 const uri =
@@ -23,18 +24,24 @@ app.listen(process.env.PORT || 5000, function () {
 
 // HashFunctions.passwordHashCompare(bcrypt,hash,req.body.password)
 app.post("/login", async (req, res) => {
-  var hashed = "getfromdb";
+  // var hashed = "getfromdb";
   var mongodbo = await MongoFunctions.connect(MongoClient, uri);
   var userinfo = await MongoFunctions.getUserInfo(mongodbo, req.body.email);
   console.log(userinfo);
+ 
 
-  var result = await HashFunctions.passwordHashCompare(
+  var ack = await HashFunctions.passwordHashCompare(
     bcrypt,
     userinfo.userinfo.password,
     req.body.password
   );
-
-  return res.send("logged");
+  if(!ack){
+    return res.send(ack)
+  }
+  var token=SessionFunctions.generateToken()
+  var changestatus=await MongoFunctions.changeSessionToken(mongodbo,req.body.email,token)
+   
+  return res.send(token);
 });
 app.post("/register", async (req, res) => {
   var mongodbo = await MongoFunctions.connect(MongoClient, uri);
@@ -43,3 +50,42 @@ app.post("/register", async (req, res) => {
   var ack = await MongoFunctions.register(mongodbo, uri, req.body.email, hash);
   return res.send(ack);
 });
+
+app.post("/getdata", async (req, res) => {
+  
+  var mongodbo = await MongoFunctions.connect(MongoClient, uri);
+  if(!MongoFunctions.validateToken(mongodbo,req.body.email,req.body.token)){
+    return res.send(401)
+  }
+  var userdata = await MongoFunctions.getUserInfo(mongodbo, req.body.email);
+  delete userdata.userinfo.password;
+  return res.send(userdata);
+});
+
+app.post('/adddata',async (req,res)=>{
+  var mongodbo = await MongoFunctions.connect(MongoClient, uri);
+  if(!await MongoFunctions.validateToken(mongodbo,req.body.email,req.body.token)){
+    return res.send(401)
+  }
+  
+  var ack=await MongoFunctions.insertData(mongodbo,req.body.email,req.body.data)
+  return res.send(ack)
+})
+
+app.post('/updatedata',async(req,res)=>{
+  var mongodbo = await MongoFunctions.connect(MongoClient, uri);
+  if(!await MongoFunctions.validateToken(mongodbo,req.body.email,req.body.token)){
+    return res.send(401)
+  }
+
+  return res.send(true)
+})
+
+app.post('/deletedata',async(req,res)=>{
+  var mongodbo = await MongoFunctions.connect(MongoClient, uri);
+  if(!await MongoFunctions.validateToken(mongodbo,req.body.email,req.body.token)){
+    return res.send(401)
+  }
+  return res.send(true)
+
+})
