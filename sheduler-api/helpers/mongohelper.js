@@ -46,10 +46,6 @@ module.exports = {
       console.log(ack)
       return ack
     })
-    
-
-
-
   },
   validateToken:async(mongo,email,token)=>{
     var result = await mongo
@@ -68,5 +64,5 @@ module.exports = {
       if(err) throw err
       return ack
     })
-  }
+}
 };
