@@ -25,10 +25,13 @@ app.listen(process.env.PORT || 5000, function () {
 // HashFunctions.passwordHashCompare(bcrypt,hash,req.body.password)
 app.post("/login", async (req, res) => {
   // var hashed = "getfromdb";
+  console.log("login")
   var mongodbo = await MongoFunctions.connect(MongoClient, uri);
   var userinfo = await MongoFunctions.getUserInfo(mongodbo, req.body.email);
   console.log(userinfo);
- 
+ if(userinfo===undefined){
+   return res.send(false)
+ }
 
   var ack = await HashFunctions.passwordHashCompare(
     bcrypt,

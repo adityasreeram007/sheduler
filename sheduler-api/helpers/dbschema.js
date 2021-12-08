@@ -5,9 +5,7 @@ module.exports={
             
         },
         sheduledata:[],
-        history:{
-
-        },
+        history:[],
         connect:{
             
         }

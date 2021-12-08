@@ -30,16 +30,10 @@ module.exports = {
   },
   insertData:async (mongo,email,shedulecontent)=>{
 
-    // var result = await mongo
-    // .collection("userdata")
-    // .find({ "userinfo.email": email })
-    // .toArray();
-    // result=result[0]
-    
-    // result.sheduledata.push(shedulecontent)
    return  mongo.collection('userdata').updateOne({'userinfo.email':email}, {
      $push:{
-       "sheduledata":shedulecontent
+       "sheduledata":shedulecontent,
+       "history":shedulecontent
      }
    }).then((ack,err)=>{
       if (err) throw err

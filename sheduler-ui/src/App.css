@@ -60,6 +60,7 @@ navbar{
   padding: 10px;
   font-family: 'Poppins';
   font-weight: 100;
+  cursor: pointer;
 }
 .nav-item-end{
   
@@ -259,6 +260,13 @@ outline: 1px solid rgb(65, 63, 63);
   
 
 }
+.largetext{
+  margin-top: 20%;
+  margin-left: 5%;
+  margin-bottom: 80%;
+  color:#b4bdc7;
+  
+}
 .to{ 
   text-align: center;
   width: 100%;
@@ -272,6 +280,15 @@ outline: 1px solid rgb(65, 63, 63);
   color:white;
   padding: 4px;
   border-radius: 2px;
+}
+
+.bg-front{
+background-color: #282c34;
+width: 100%;
+top:0;
+left:0;
+height: 100%;
+
 }
 .textarea{
 height:160px;
@@ -297,10 +314,52 @@ border: 1px solid grey;
 }
 .formhead{
   color:white;
+  margin-bottom: 10px;
  
   
   
   
+}
+.fa-times-circle{
+  color:red;
+}
+.fa-check-circle{
+  color:green;
+}
+.notification-card{
+
+  position: absolute;
+  z-index: 100000;
+  height:10%;
+  width:20%;
+  margin-top: 20px;
+  box-shadow: 0 0 1rem 0 rgba(134, 131, 131, 0.2);
+  background-color: rgb(233, 242, 245);
+  padding: 20px;
+  margin-left: 78%;
+  color:white;
+  border-radius: 10px;
+ 
+  transition: all 250ms linear 2s;
+}
+.authbutton{
+  width: 100%;
+  padding: 5px;
+}
+.authinput{
+
+  font-size: 15px;
+  width: 100%;
+  padding:  8px;
+
+  margin-bottom: 20px;
+  border-radius: 3px;
+  border: none; 
+  border-bottom: 1px solid grey;
+  
+}
+.authinput:focus{
+  outline: none;
 }
 .inputbox{
 
@@ -318,8 +377,12 @@ border: 1px solid grey;
 }
 .popupcontent{
   background-color: aliceblue;
-  font-size: 10px;
-  padding: 5px;
+  font-size: 7px;
+  padding: 10px;
+}
+.btn-danger{
+  padding: 4px;
+  font-size: 14px;
 }
 .profile{
   width:35px;
