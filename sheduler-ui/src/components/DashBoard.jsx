@@ -13,7 +13,7 @@ class DashBoard extends Component {
   };
 
   render() {
-    var numbers = [1, 2, 3, 4, 5, 7, 8, 9, 0];
+    var numbers = [1];
     var list = numbers.map((item) => {
       return <Card key={item} />;
     });

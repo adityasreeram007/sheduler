@@ -36,7 +36,7 @@ class FrontPage extends Component {
   loginUser=async (username,password)=>{
     return await axios.post('http://localhost:5000/login',{email:username,password:password}).then((data,err)=>{
       console.log(data)
-    if(err){
+    if(err || data.data===false){
         this.setState({
           notification:true,
           notificationMessage:"Username/Password Incorrect",

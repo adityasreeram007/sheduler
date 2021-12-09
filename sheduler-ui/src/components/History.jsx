@@ -7,8 +7,8 @@ class History extends Component{
                 console.log('clicked')
             }}>
                 
-               <div>^ Updated event webmature </div>
-               <div>12th jan 2021 3:30pm</div>
+               <div>^ Updated event Reduce Market Risks </div>
+               <div>Today 3:30pm</div>
             </div>
 
         )

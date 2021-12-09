@@ -6,8 +6,8 @@ class Card extends Component{
 
 
             <div class="card">
-                <div>Name of the Event</div>
-               <div class="date">25th November 2021</div> 
+                <div>Reduce Market Risks</div>
+               <div class="date">25th December 2021</div> 
                <div class="time" >04:30PM</div>
                
             </div>
