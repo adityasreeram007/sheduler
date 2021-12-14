@@ -111,6 +111,7 @@ navbar{
   border:0.2px solid #babdc2;
 }
 .chatbox{
+  
   border:0.2px solid #babdc2;
   height: calc(90vh);
 }
@@ -331,12 +332,28 @@ outline: 1px solid rgb(65, 63, 63);
   
 
 }
+.messagearea{
+  height: 85%;
+  background-color: #343a40;
+  border-radius: 5px;
+}
+/* .sendarea{
+  margin-top: 5%;
+} */
+.sendbox{
+  width: 100%;
+  height: auto;
+}
 .largetext{
   margin-top: 20%;
   margin-left: 5%;
   margin-bottom: 80%;
   color:#b4bdc7;
   
+}
+.headname{
+  padding: 15px;
+  font-size: larger;
 }
 .to{ 
   text-align: center;
