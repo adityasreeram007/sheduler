@@ -95,6 +95,37 @@ navbar{
   
 
 }
+.chatsearch{
+  padding:8px;
+  
+}
+.searchbox{
+  width: 100%;
+}
+.form-control{
+ width:100%;
+ margin-left: -5%;
+  
+}
+.userlist{
+  border:0.2px solid #babdc2;
+}
+.chatbox{
+  border:0.2px solid #babdc2;
+  height: calc(90vh);
+}
+/* .chatbox{
+  margin-top: 20px;
+} */
+.usercard{
+  
+ border-bottom: 0.2px solid #babdc2;
+ 
+  padding: 10px;
+}
+.iZzUdc{
+  width: 100%;
+}
 .name{
   text-align: left;
   width: 100%;

@@ -4,6 +4,7 @@ import DashBoard from "./components/DashBoard";
 import "./App.css";
 import FrontPage from './components/FrontPage'
 import Connect from './components/Connect'
+import ChatBox from "./components/ChatBox";
 import Button from "@restart/ui/esm/Button";
 import { 
    
@@ -34,6 +35,7 @@ this.setState({loggedin:true})
             </li>
             <Link to="/"> <li class="nav-item-mid">Dashboard</li></Link>
             <Link to="/connect"> <li class="nav-item-mid">Connect</li></Link>
+            <Link to="/chat"> <li class="nav-item-mid">Chat</li></Link>
           </ul>
           <div class="nav-item-end">
             <ul class="navbar-nav">
@@ -62,6 +64,7 @@ this.setState({loggedin:true})
           <Routes>
           <Route path="/" element={<DashBoard />}/>
           <Route path="/connect" element={<Connect/>}/>
+          <Route path="/chat" element={<ChatBox/>}/>
         </Routes>
           
         </div></Router></>:
