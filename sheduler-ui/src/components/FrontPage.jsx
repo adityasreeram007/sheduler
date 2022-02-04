@@ -26,7 +26,7 @@ class FrontPage extends Component {
   componentDidMount=()=>{
    
     document.body.style.backgroundColor="black"
-    document.body.style.overflowY="hidden"
+  
     setInterval(() =>
     this.setState({index : (this.state.index + 1)%this.state.text.length}),
     3000 // every 3 seconds

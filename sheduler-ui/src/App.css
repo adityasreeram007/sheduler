@@ -332,14 +332,55 @@ outline: 1px solid rgb(65, 63, 63);
   
 
 }
+.message{
+  color:black;
+  margin-top:6px ;
+  margin-bottom: 6px;
+  
+  
+
+ 
+}
+.usermessage{
+  height:90%;
+}
+.messagetext{
+  background-color: #e3e7ec;
+  padding: 5px;
+  width: fit-content;
+  border-radius: 5px;
+  max-width: 60%;
+}
 .messagearea{
-  height: 85%;
+  height: 98%;
   background-color: #343a40;
   border-radius: 5px;
+  width:98%;
+  overflow-y: scroll;
+  margin-left: 1%;
 }
-/* .sendarea{
-  margin-top: 5%;
-} */
+.messagequeue{
+  
+  
+}
+.messagearea::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+.messagearea::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.messagearea::-webkit-scrollbar-thumb {
+  background-color: #56585c;
+  
+outline: 1px solid rgb(65, 63, 63);
+}
+.sendarea{
+ margin-left: 4%;
+ width: 96%;
+  
+}
 .sendbox{
   width: 100%;
   height: auto;

@@ -1,6 +1,6 @@
 var ex = require("express");
 var cors = require("cors");
-var bcrypt = require("bcrypt");
+var bcrypt = require("bcryptjs");
 var HashFunctions = require("./helpers/hasher");
 var MongoFunctions = require("./helpers/mongohelper");
 var SessionFunctions = require("./helpers/sessionHelper");

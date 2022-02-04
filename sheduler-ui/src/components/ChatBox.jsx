@@ -5,6 +5,14 @@ import ChatArea from "./ChatArea";
 var users=[
     {name:"Arnold"},{name:"Amjad"}
 ]
+var messages={
+    "Arnold":[{"text":"hello","pos":"left"},{"text":"hello","pos":"right"},{"text":"this is text written by arnold to me when he was high .","pos":"right"},{"text":"hello","pos":"right"}
+,{"text":"hello","pos":"left"},{"text":"hello","pos":"right"},{"text":"this is text written by arnold to me when he was high .","pos":"right"},{"text":"hello","pos":"right"}
+,{"text":"hello","pos":"left"},{"text":"hello","pos":"right"},{"text":"this is text written by arnold to me when he was high .","pos":"right"},{"text":"hello","pos":"right"}
+,{"text":"hello","pos":"left"},{"text":"hello","pos":"right"},{"text":"this is text written by arnold to me when he was high .","pos":"right"},{"text":"hello","pos":"right"}
+,{"text":"hello","pos":"left"},{"text":"hello","pos":"right"},{"text":"this is text written by arnold to me when he was high .","pos":"right"},{"text":"hello","pos":"right"},
+{"text":"hello","pos":"left"},{"text":"hello","pos":"right"},{"text":"this is text written by arnold to me when he was high .","pos":"right"},{"text":"hello","pos":"right"}]
+}
 class ChatBox extends Component{
     render(){
         var friends=users.map((item)=>{
@@ -25,8 +33,8 @@ class ChatBox extends Component{
                 }
                 </div>
              
-                <div className="col-sm-8">
-                    <ChatArea messages={{}}/>
+                <div className="col-sm-8 usermessage">
+            <ChatArea messages={messages["Arnold"]}/>
                 </div>
                 </div>
            </div>

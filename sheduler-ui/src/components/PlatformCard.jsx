@@ -7,9 +7,10 @@ class PlatformCard extends Component {
       <>
         <div class="platformcard">
           <div className="row">
-            <div className="col-sm-10">
+            <div className="col-sm-10 ">
+            <div class="align-middle">
               <i class={this.props.data.icon} aria-hidden="true"></i>{" "}
-              {this.props.data.name}
+              {this.props.data.name}</div>
             </div>
             <div className="col-sm-2">
               <Button class="btn btn-info connectbtn">connect</Button>
